@@ -51,5 +51,14 @@ function getDay(date: string): TResult<number> {
   return Result.Ok(Number(possibleDate.getDay()))
 }
 
-getDay("2022-10-01")
-getDay("2022-10-01fd")
+const day1 = getDay("2022-10-01")
+const day2 = getDay("fasdfasdfasd")
+
+if (day1.ok) {
+  console.log(day1.value)
+}
+
+if (!day2.ok) {
+  console.log(day2.error)
+}
+
